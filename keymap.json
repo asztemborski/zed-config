@@ -1,0 +1,41 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+
+[
+  // -----------------------
+  // Insert mode navigation
+  // -----------------------
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "ctrl-b": "editor::MoveToBeginningOfLine",
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-l": "editor::MoveRight",
+      "ctrl-j": "editor::MoveDown",
+      "ctrl-k": "editor::MoveUp"
+    }
+  },
+
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-h": "pane::ActivatePreviousItem",
+      "ctrl-shift-l": "pane::ActivateNextItem",
+      "ctrl-shift-c": "pane::CloseActiveItem",
+      "ctrl-shift-f": "file_finder::Toggle"
+    }
+  },
+
+  {
+    "context": "Workspace && vim_mode != insert && !menu",
+    "bindings": {
+      "space r n": "editor::ToggleRelativeLineNumbers"
+    }
+  }
+]
