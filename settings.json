@@ -7,49 +7,62 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Soft Charmed Icons",
-  "agent": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
-    }
-  },
-  "ui_font_size": 16,
-  "buffer_font_family": "Fira Code",
-  "buffer_font_weight": 200,
-  "buffer_font_features": {
-    "cult": true
-  },
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Vitess"
-  },
-  "vim_mode": true,
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "show_edit_predictions": false,
-  "inlay_hints": {
-    "enabled": false
-  },
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
-  },
-  "title_bar": {
-    "show_user_picture": false
-  },
-  "diagnostics": {
-    "button": true,
-    "include_warnings": true,
-    "inline": {
-      "enabled": true,
-      "update_debounce_ms": 150,
-      "padding": 4,
-      "min_column": 0,
-      "max_severity": null
-    }
-  }
+    "ui_font_weight": 350.0,
+    "ui_font_family": "JetBrains Mono NL",
+    "when_closing_with_no_tabs": "keep_window_open",
+    "icon_theme": "Soft Charmed Icons",
+    "agent": {
+        "single_file_review": false,
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4.5"
+        }
+    },
+    "ui_font_size": 14.5,
+    "buffer_font_family": "JetBrains Mono NL",
+    "buffer_font_weight": 100.0,
+    "buffer_font_features": {
+        "cult": true
+    },
+    "buffer_font_size": 15.0,
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "Vitess"
+    },
+    "vim_mode": true,
+    "features": {
+        "edit_prediction_provider": "copilot"
+    },
+    "show_edit_predictions": false,
+    "inlay_hints": {
+        "enabled": false
+    },
+    "telemetry": {
+        "metrics": false,
+        "diagnostics": false
+    },
+    "title_bar": {
+        "show_user_picture": false
+    },
+    "diagnostics": {
+        "button": true,
+        "include_warnings": true,
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        }
+    },
+    "languages": {
+        "YAML": {
+            "tab_size": 2
+        },
+        "C++": {
+            "tab_size": 4
+        }
+    },
+    "tab_size": 4
 }

@@ -7,35 +7,71 @@
 // from the command palette.
 
 [
-  // -----------------------
-  // Insert mode navigation
-  // -----------------------
-  {
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      "ctrl-b": "editor::MoveToBeginningOfLine",
-      "ctrl-e": "editor::MoveToEndOfLine",
-      "ctrl-h": "editor::MoveLeft",
-      "ctrl-l": "editor::MoveRight",
-      "ctrl-j": "editor::MoveDown",
-      "ctrl-k": "editor::MoveUp"
-    }
-  },
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "ctrl-b": "editor::MoveToBeginningOfLine",
+            "ctrl-e": "editor::MoveToEndOfLine",
+            "ctrl-h": "editor::MoveLeft",
+            "ctrl-l": "editor::MoveRight",
+            "ctrl-j": "editor::MoveDown",
+            "ctrl-k": "editor::MoveUp"
+        }
+    },
 
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-shift-h": "pane::ActivatePreviousItem",
-      "ctrl-shift-l": "pane::ActivateNextItem",
-      "ctrl-shift-c": "pane::CloseActiveItem",
-      "ctrl-shift-f": "file_finder::Toggle"
-    }
-  },
+    {
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            "space f f": "file_finder::Toggle",
+            "space e": "project_panel::ToggleFocus",
+            "space g g": "git_panel::ToggleFocus",
+            "space /": "editor::ToggleComments",
+            "space d": "debug_panel::ToggleFocus",
 
-  {
-    "context": "Workspace && vim_mode != insert && !menu",
-    "bindings": {
-      "space r n": "editor::ToggleRelativeLineNumbers"
+            "ctrl-shift-h": "pane::ActivatePreviousItem",
+            "ctrl-shift-l": "pane::ActivateNextItem"
+        }
+    },
+
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-w j": "workspace::ActivatePaneRight",
+            "ctrl-w k": "workspace::ActivatePaneUp",
+            "ctrl-w h": "workspace::ActivatePaneDown",
+            "ctrl-w l": "workspace::ActivatePaneRight"
+        }
+    },
+
+    //Disabled
+    {
+        "context": "PromptLibrary",
+        "bindings": {
+            "ctrl-w": null
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-w": null
+        }
+    },
+    {
+        "context": "Pane",
+        "bindings": {
+            "ctrl-w": null
+        }
+    },
+    {
+        "context": "PromptLibrary",
+        "bindings": {
+            "ctrl-w": null
+        }
+    },
+    {
+        "context": "PromptLibrary",
+        "bindings": {
+            "ctrl-w": null
+        }
     }
-  }
 ]
